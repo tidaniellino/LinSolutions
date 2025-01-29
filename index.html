@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.svg" type="image/x-icon">
+    <title>LinSolutions - Soluções em Tecnologia</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>LinSolutions</h1>
+            <nav>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <h2>Transforme sua empresa com a melhor tecnologia!</h2>
+            <p>A LinSolutions oferece soluções completas em TI para o seu negócio.</p>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Nosso portfólio de serviços</h2>
+            <div class="servicos-container">
+                <div class="servico">
+                    <h3>Consultoria em T.I</h3>
+                    <p>Transforme o seu negócio com uma consultoria especializada em TI, garantindo soluções inteligentes e escaláveis.</p>
+                </div>
+                <div class="servico">
+                    <h3>Cloud e Infraestrutura</h3>
+                    <p>Implantação e gestão de soluções em nuvem e infraestrutura para otimizar os processos da sua empresa.</p>
+                </div>
+                <div class="servico">
+                    <h3>Suporte</h3>
+                    <p>Suporte técnico especializado para garantir o funcionamento contínuo e seguro dos seus sistemas.</p>
+                </div>
+                <div class="servico">
+                    <h3>Desenvolvimento</h3>
+                    <p>Desenvolvimento de sistemas e aplicativos sob medida, atendendo às necessidades específicas do seu negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em contato</h2>
+            <form id="contatoForm" action="mailto:ti.daniellino@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/31975443265" target="_blank" class="whatsapp">
+        <img src="https://img.icons8.com/?size=512&id=16466&format=png" alt="WhatsApp" />
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LinSolutions | Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("contatoForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            Swal.fire({
+                icon: 'success',
+                title: 'Mensagem Enviada!',
+                text: 'Obrigado por entrar em contato, em breve responderemos.',
+            });
+        });
+    </script>
+</body>
+
+</html>

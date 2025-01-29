@@ -1,0 +1,255 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF5F5;
+    color: #0C0101;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0C0101;
+    color: #FFF5F5;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF5F5;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background-color: #B01412;
+    color: #FFF5F5;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 3rem;
+}
+
+.banner p {
+    font-size: 1.25rem;
+}
+
+/* Seção de serviços */
+.servicos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.servico {
+    background-color: #FFF5F5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.servico h3 {
+    color: #B01412;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.servico p {
+    font-size: 1rem;
+}
+
+/* Formulário de contato */
+.contato {
+    padding: 60px 20px;
+    background-color: #FFF5F5;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato input, .contato textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #B01412;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contato button {
+    padding: 15px;
+    background-color: #B01412;
+    color: #FFF5F5;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #0C0101;
+}
+
+/* WhatsApp Icon */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 15px;
+    z-index: 9999; /* Ajuste do z-index para garantir que fique sobre outros elementos */
+}
+
+.whatsapp img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0C0101;
+    color: #FFF5F5;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajustar o cabeçalho para telas menores */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Ajustar a seção de serviços para dispositivos móveis */
+    .servicos-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .servico h3 {
+        font-size: 1.5rem;
+    }
+
+    .servico p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar o formulário de contato para dispositivos móveis */
+    .contato form {
+        width: 90%;
+    }
+
+    .contato input, .contato textarea {
+        font-size: 0.9rem;
+    }
+
+    .contato button {
+        font-size: 1rem;
+    }
+
+    /* Ajuste para o ícone do WhatsApp em telas pequenas */
+    .whatsapp {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px;
+    }
+
+    .whatsapp img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes finais para dispositivos muito pequenos */
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .servicos h2 {
+        font-size: 2rem;
+    }
+
+    .servico h3 {
+        font-size: 1.25rem;
+    }
+
+    .contato h2 {
+        font-size: 2rem;
+    }
+}
